@@ -1,13 +1,8 @@
 import "./style.css";
 
-import type Bookmarks_ from "@arcgis/core/widgets/Bookmarks";
-import type Expand_ from "@arcgis/core/widgets/Expand";
-import type MapView_ from "@arcgis/core/views/MapView";
-import type WebMap_ from "@arcgis/core/WebMap";
-
 async function load() {
   const [Bookmarks, Expand, MapView, WebMap] = await window.$arcgis.import<
-    [typeof Bookmarks_, typeof Expand_, typeof MapView_, typeof WebMap_]
+    [typeof __esri.Bookmarks, typeof __esri.Expand, typeof __esri.MapView, typeof __esri.WebMap]
   >([
     "@arcgis/core/widgets/Bookmarks.js",
     "@arcgis/core/widgets/Expand.js",
